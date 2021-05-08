@@ -1,0 +1,92 @@
+gpa.css
+
+.gpaConatiner {
+    text-align: center;
+}
+
+.name {
+    margin-top: 6rem;
+}
+
+.class {
+    margin-top: 1rem;
+}
+
+.head {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+.instruction {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.enter_course {
+    margin-top: 1rem;
+}
+
+.course1 {
+    margin-top: 1rem;
+}
+
+.course2 {
+    margin-top: 1rem;
+}
+
+.course3 {
+    margin-top: 1rem;
+}
+
+.course4 {
+    margin-top: 1rem;
+}
+
+.course5 {
+    margin-top: 1rem;
+}
+
+.course6 {
+    margin-top: 1rem;
+}
+
+.add {
+    margin-top: 1rem;
+}
+
+.enter_cgpa {
+    margin-top: 2rem;
+}
+
+.enter_credit {
+    margin-top: 1rem;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+.calculate {
+    margin-top: 2rem;
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+}
+
+.result {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+.termGPA {
+    margin-top: 1rem;
+}
+
+.gpaContainer .ButtonCalc {
+    background-color: #e7e7e7;
+    color: black;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

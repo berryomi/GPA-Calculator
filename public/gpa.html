@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Calculation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/gpa.css"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+</head>
+<body>
+<div id="gpaApp">
+    <div class="gpaContainer">
+        <div class="header">
+            <h1>Course & GPA Management System</h1>
+        </div>
+
+        <div class="topnav">
+            <a href="/home.html">Home</a>
+            <a href="gpa.html">GPA/CGPA Calculation</a>
+        </div>
+
+        <div class="instruction" style="margin-bottom: 50px; font-size: 12pt;">
+            <p>By entering your course information, you can calculate your GPA/CGPA based on your anticipated grade.</p>
+        </div>
+
+        <div class="enter_course">
+            Enter your courses:
+        </div>
+
+        <div class="course1">
+            <div>
+                Course name 1:
+                <input v-model="nameInput" type="text"/>
+            </div>
+
+            <div>
+                Number of units:
+                <input v-model="unitInput" type="text"/>
+            </div>
+
+            <div>
+                Anticipated letter grade:
+                <select id="grades1" v-model="selectedGrade">
+                    <option v-for="option in grades" :value="option">
+                        {{ option.letter }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="course2">
+            <div>
+                Course name 2:
+                <input v-model="nameInput2" type="text"/>
+            </div>
+
+            <div>
+                Number of units:
+                <input v-model="unitInput2" type="text"/>
+            </div>
+
+            <div>
+                Anticipated letter grade:
+                <select id="grades2" v-model="selectedGrade2">
+                    <option v-for="option in grades" :value="option">
+                        {{ option.letter }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="course3">
+            <div>
+                Course name 3:
+                <input v-model="nameInput3" type="text"/>
+            </div>
+
+            <div>
+                Number of units:
+                <input v-model="unitInput3" type="text"/>
+            </div>
+
+            <div>
+                Anticipated letter grade:
+                <select id="grades3" v-model="selectedGrade3">
+                    <option v-for="option in grades" :value="option">
+                        {{ option.letter }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="course4">
+            <div>
+                Course name 4:
+                <input v-model="nameInput4" type="text"/>
+            </div>
+
+            <div>
+                Number of units:
+                <input v-model="unitInput4" type="text"/>
+            </div>
+
+            <div>
+                Anticipated letter grade:
+                <select id="grades4" v-model="selectedGrade4">
+                    <option v-for="option in grades" :value="option">
+                        {{ option.letter }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="course5">
+            <div>
+                Course name 5:
+                <input v-model="nameInput5" type="text"/>
+            </div>
+
+            <div>
+                Number of units:
+                <input v-model="unitInput5" type="text"/>
+            </div>
+
+            <div>
+                Anticipated letter grade:
+                <select id="grades5" v-model="selectedGrade5">
+                    <option v-for="option in grades" :value="option">
+                        {{ option.letter }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="course6">
+            <div>
+                Course name 6:
+                <input v-model="nameInput6" type="text"/>
+            </div>
+
+            <div>
+                Number of units:
+                <input v-model="unitInput6" type="text"/>
+            </div>
+
+            <div>
+                Anticipated letter grade:
+                <select id="grades6" v-model="selectedGrade6">
+                    <option v-for="option in grades" :value="option">
+                        {{ option.letter }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="enter_cgpa">
+            Enter your current CGPA:
+            <input v-model="cgpaInput" type="text"/>
+        </div>
+
+        <div class="enter_credit">
+            Enter your total units attempted:
+            <input v-model="totalCreditInput" type="text"/>
+        </div>
+
+        <input class="ButtonCalc" id="calcButton" type="button" value="Calculate"
+        style="margin-top: 40px; font-size: 38px; height: 200px;"/>
+
+        <div class="result">
+            Result:
+        </div>
+
+        <div class="termGPA">
+            GPA for Current Term:
+            <p><strong>{{termGPAOutput}}</strong></p>
+        </div>
+
+        <div style="margin-bottom: 50px;">
+            CGPA:
+            <p><strong>{{cgpaOutput}}</strong></p>
+        </div>
+    </div>
+</div>
+
+    <script src="scripts/gpa.js"></script>
+</body>
+</html>
+
